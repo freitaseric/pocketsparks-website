@@ -1,0 +1,49 @@
+@use "../../../theme";
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: theme.$gutter-color;
+  margin-bottom: 2rem;
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    transition: transform 500ms;
+  }
+
+  img:hover {
+    transform: scale(1.25);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      transition: all 350ms;
+    }
+
+    a.active {
+      color: theme.$accent-color;
+    }
+
+    a:hover {
+      transform: scale(1.15);
+      color: theme.$guide-color;
+    }
+
+    a.active:hover {
+      transform: scale(1.15);
+      color: theme.$accent-color;
+    }
+  }
+}
