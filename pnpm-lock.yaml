@@ -41,6 +41,9 @@ importers:
       '@ng-icons/heroicons':
         specifier: ^30.2.0
         version: 30.2.0
+      '@ng-icons/lucide':
+        specifier: ^30.2.0
+        version: 30.2.0
       ngx-typed-writer:
         specifier: ^1.4.0
         version: 1.4.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))
@@ -1355,6 +1358,9 @@ packages:
 
   '@ng-icons/heroicons@30.2.0':
     resolution: {integrity: sha512-f1td7Uow/DFXcNB0sFyc+y5/9O2uQqTAfKR3VJM32Z0hAjzar13b3q/Lt4odmUDnQFeVE0BHNgJGVzvw9Wo22g==}
+
+  '@ng-icons/lucide@30.2.0':
+    resolution: {integrity: sha512-z8tqUMcgw2MXuJiUHRtdjs4LwUxrxV6xy3MsFBkK6LKCNen9v7FXfOjOPzFvR/HlOJ+ZmgJfxJ6cp5lhwvDM7Q==}
 
   '@ngtools/webpack@19.1.6':
     resolution: {integrity: sha512-36I/y4KIRWyE35OgZXzYnDCNQ2G3VB/2awj8L3VowDyTP9enJj6V044UGpCNiKOgYerubgMN3gcPIsOzg0pLpg==}
@@ -5691,6 +5697,10 @@ snapshots:
       tslib: 2.8.1
 
   '@ng-icons/heroicons@30.2.0':
+    dependencies:
+      tslib: 2.8.1
+
+  '@ng-icons/lucide@30.2.0':
     dependencies:
       tslib: 2.8.1
 

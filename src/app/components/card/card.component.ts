@@ -20,7 +20,6 @@ interface LinkButton {
 	styleUrl: './card.component.scss',
 })
 export class CardComponent {
-	@Input('width') cardWidth!: string
 	@Input() iconName!: string
 	@Input() title!: string
 	@Input() description!: string
@@ -31,8 +30,6 @@ export class CardComponent {
 	@Input() cancelButtonText!: string
 	@Input() cancelButtonAction!: () => void
 	@Input() linkButtons!: LinkButton[]
-
-	width = this.cardWidth ? `width: ${this.cardWidth};` : 'min-width: 400px;'
 
 	getUrlDomain(url: string) {
 		return new URL(url).hostname

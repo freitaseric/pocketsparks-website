@@ -1,4 +1,4 @@
-<section [style]="width">
+<section>
   <div id="title-field">
     @if (iconName) {
     <ng-icon [name]="iconName" size="24px" />
@@ -26,13 +26,16 @@
       [href]="button.url"
       target="_blank"
       id="link"
-      ><ng-icon [name]="button.icon" size="24px" /> {{ button.text }}
-      <ng-icon name="lucideExternalLink" size="16px"
-    /></a>
-    } @else {
-    <a [routerLink]="button.url" id="link"
-      ><ng-icon [name]="button.icon" size="24px" /> {{ button.text }}</a
     >
+      <ng-icon [name]="button.icon" size="24px" />
+      {{ button.text }}
+      <ng-icon name="lucideExternalLink" size="16px" />
+    </a>
+    } @else {
+    <a [routerLink]="button.url" id="link">
+      <ng-icon [name]="button.icon" size="24px" />
+      {{ button.text }}
+    </a>
     } } }
   </div>
   }

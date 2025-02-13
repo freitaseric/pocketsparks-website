@@ -1,1 +1,35 @@
-<p>home works!</p>
+<main>
+  <div id="intro">
+    <section id="titles">
+      <ngx-typed-writer
+        [strings]="['PocketSparks']"
+        [cursorChar]="'|'"
+        [showCursor]="true"
+        [backSpeed]="100"
+        [typeSpeed]="200"
+      />
+      <p>The IDE that fits in your pocket.</p>
+    </section>
+    <section id="image">
+      <img src="#" alt="Application mockup" />
+    </section>
+  </div>
+
+  <div id="cards">
+    <app-card
+      iconName="lucideCode"
+      title="Code in your favorite language"
+      description="You can use any language that your want to code your own project, the PocketSparks is language agnostic!"
+    />
+    <app-card
+      iconName="lucideTerminal"
+      title="Interact with the terminal"
+      description="In PocketSparks you can interact with a integrated terminal, running commands on your project or your android (root only)."
+    />
+    <app-card
+      iconName="lucidePalette"
+      title="Highly customizable"
+      description="The app contains a theming system, that allow users to create and share your own themes to make PocketSparks your own."
+    />
+  </div>
+</main>
