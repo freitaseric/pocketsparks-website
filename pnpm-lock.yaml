@@ -32,6 +32,18 @@ importers:
       '@angular/router':
         specifier: ^19.1.0
         version: 19.1.5(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(@angular/platform-browser@19.1.5(@angular/animations@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0)))(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0)))(rxjs@7.8.1)
+      '@geometricpanda/angular-tilt':
+        specifier: ^0.4.0
+        version: 0.4.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))
+      '@ng-icons/core':
+        specifier: ^30.2.0
+        version: 30.2.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
+      '@ng-icons/heroicons':
+        specifier: ^30.2.0
+        version: 30.2.0
+      ngx-typed-writer:
+        specifier: ^1.4.0
+        version: 1.4.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))
       rxjs:
         specifier: ~7.8.0
         version: 7.8.1
@@ -980,6 +992,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@geometricpanda/angular-tilt@0.4.0':
+    resolution: {integrity: sha512-UiwzEzpWd5XvEcefS0h8hEZq1VSnEplN+1r+q7O22FnlcZrcCsQWPLcmdUehHZmZ332mqwTXRJ6EIcxumHwZcw==}
+    peerDependencies:
+      '@angular/common': ^17.0.0
+      '@angular/core': ^17.0.0
+
   '@inquirer/checkbox@4.1.1':
     resolution: {integrity: sha512-os5kFd/52gZTl/W6xqMfhaKVJHQM8V/U1P8jcSaQJ/C4Qhdrf2jEXdA/HaxfQs9iiUA/0yzYhk5d3oRHTxGDDQ==}
     engines: {node: '>=18'}
@@ -1327,6 +1345,16 @@ packages:
   '@napi-rs/nice@1.0.1':
     resolution: {integrity: sha512-zM0mVWSXE0a0h9aKACLwKmD6nHcRiKrPpCfvaKqG1CqDEyjEawId0ocXxVzPMCAm6kkWr2P025msfxXEnt8UGQ==}
     engines: {node: '>= 10'}
+
+  '@ng-icons/core@30.2.0':
+    resolution: {integrity: sha512-iByDwPw/CJ/k6y2mskW50BeOkgcfAlGwZKipAvUdy6mU0Yg3qmba0oJ5BOsi3xZbnRiMUOmehBxYwjw4aDKnkA==}
+    peerDependencies:
+      '@angular/common': '>=18.0.0'
+      '@angular/core': '>=18.0.0'
+      rxjs: ^6.5.3 || ^7.4.0
+
+  '@ng-icons/heroicons@30.2.0':
+    resolution: {integrity: sha512-f1td7Uow/DFXcNB0sFyc+y5/9O2uQqTAfKR3VJM32Z0hAjzar13b3q/Lt4odmUDnQFeVE0BHNgJGVzvw9Wo22g==}
 
   '@ngtools/webpack@19.1.6':
     resolution: {integrity: sha512-36I/y4KIRWyE35OgZXzYnDCNQ2G3VB/2awj8L3VowDyTP9enJj6V044UGpCNiKOgYerubgMN3gcPIsOzg0pLpg==}
@@ -3181,6 +3209,12 @@ packages:
 
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+
+  ngx-typed-writer@1.4.0:
+    resolution: {integrity: sha512-EtJrd7ufxTVHKgmOROmXW4Hc6S5tvQHK2iJh0H/rAjdz71X8NbesucFcuqfrriw76eICbWhjMli6D0ocs022qw==}
+    peerDependencies:
+      '@angular/common': '>=18.0.0'
+      '@angular/core': '>=18.0.0'
 
   node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
@@ -5354,6 +5388,12 @@ snapshots:
   '@esbuild/win32-x64@0.24.2':
     optional: true
 
+  '@geometricpanda/angular-tilt@0.4.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))':
+    dependencies:
+      '@angular/common': 19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
+      '@angular/core': 19.1.5(rxjs@7.8.1)(zone.js@0.15.0)
+      tslib: 2.8.1
+
   '@inquirer/checkbox@4.1.1(@types/node@22.13.1)':
     dependencies:
       '@inquirer/core': 10.1.6(@types/node@22.13.1)
@@ -5642,6 +5682,17 @@ snapshots:
       '@napi-rs/nice-win32-ia32-msvc': 1.0.1
       '@napi-rs/nice-win32-x64-msvc': 1.0.1
     optional: true
+
+  '@ng-icons/core@30.2.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)':
+    dependencies:
+      '@angular/common': 19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
+      '@angular/core': 19.1.5(rxjs@7.8.1)(zone.js@0.15.0)
+      rxjs: 7.8.1
+      tslib: 2.8.1
+
+  '@ng-icons/heroicons@30.2.0':
+    dependencies:
+      tslib: 2.8.1
 
   '@ngtools/webpack@19.1.6(@angular/compiler-cli@19.1.5(@angular/compiler@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0)))(typescript@5.7.3))(typescript@5.7.3)(webpack@5.97.1(esbuild@0.24.2))':
     dependencies:
@@ -7608,6 +7659,12 @@ snapshots:
   negotiator@1.0.0: {}
 
   neo-async@2.6.2: {}
+
+  ngx-typed-writer@1.4.0(@angular/common@19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0)):
+    dependencies:
+      '@angular/common': 19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
+      '@angular/core': 19.1.5(rxjs@7.8.1)(zone.js@0.15.0)
+      tslib: 2.8.1
 
   node-addon-api@6.1.0:
     optional: true

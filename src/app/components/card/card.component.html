@@ -1,0 +1,24 @@
+<section [style]="width">
+  <div id="title-field">
+    @if (iconName) {
+    <ng-icon [name]="iconName" size="24px" />
+    }
+    <h1>{{ title }}</h1>
+  </div>
+  <span class="separator"></span>
+  <p>{{ description }}</p>
+  @if (confirmButton || cancelButton) {
+  <span class="separator"></span>
+  <div id="actions-field">
+    @if (cancelButtonText) {
+    <button id="cancel" ngTilt perspective="150" scale="1.05">
+      {{ cancelButtonText }}
+    </button>
+    } @if (confirmButtonText) {
+    <button id="confirm" ngTilt perspective="150" scale="1.05">
+      {{ confirmButtonText }}
+    </button>
+    }
+  </div>
+  }
+</section>
