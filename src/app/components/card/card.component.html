@@ -5,12 +5,13 @@
     }
     <h1>{{ title }}</h1>
   </div>
+  @if (description) {
   <span class="separator"></span>
   <p>{{ description }}</p>
-  @if (confirmButton || cancelButton) {
+  } @if (confirmButton || cancelButton || linkButtons) {
   <span class="separator"></span>
   <div id="actions-field">
-    @if (cancelButtonText) {
+    @if (!linkButtons) { @if (cancelButtonText) {
     <button id="cancel" ngTilt perspective="150" scale="1.05">
       {{ cancelButtonText }}
     </button>
@@ -18,7 +19,21 @@
     <button id="confirm" ngTilt perspective="150" scale="1.05">
       {{ confirmButtonText }}
     </button>
-    }
+    } } @else { @for (button of linkButtons; track $index) { @if
+    (button.isExternal) {
+    <a
+      [title]="getUrlDomain(button.url)"
+      [href]="button.url"
+      target="_blank"
+      id="link"
+      ><ng-icon [name]="button.icon" size="24px" /> {{ button.text }}
+      <ng-icon name="lucideExternalLink" size="24px"
+    /></a>
+    } @else {
+    <a [routerLink]="button.url" id="link"
+      ><ng-icon [name]="button.icon" size="24px" /> {{ button.text }}</a
+    >
+    } } }
   </div>
   }
 </section>

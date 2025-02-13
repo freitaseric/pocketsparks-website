@@ -1,17 +1,26 @@
 import { Component, Input } from '@angular/core'
 import { NgIcon, provideIcons } from '@ng-icons/core'
 import { NgTiltModule } from '@geometricpanda/angular-tilt'
+import { RouterLink } from '@angular/router'
 import * as heroicons from '@ng-icons/heroicons/outline'
+import * as lucide from '@ng-icons/lucide'
+
+interface LinkButton {
+	text: string
+	url: string
+	icon: string
+	isExternal: boolean
+}
 
 @Component({
 	selector: 'app-card',
-	imports: [NgIcon, NgTiltModule],
-	providers: [provideIcons({ ...heroicons })],
+	imports: [NgIcon, NgTiltModule, RouterLink],
+	providers: [provideIcons({ ...heroicons, ...lucide })],
 	templateUrl: './card.component.html',
 	styleUrl: './card.component.scss',
 })
 export class CardComponent {
-	@Input('width') cardWidth = '400px'
+	@Input('width') cardWidth!: string
 	@Input() iconName!: string
 	@Input() title!: string
 	@Input() description!: string
@@ -21,6 +30,11 @@ export class CardComponent {
 	@Input() cancelButton!: boolean
 	@Input() cancelButtonText!: string
 	@Input() cancelButtonAction!: () => void
+	@Input() linkButtons!: LinkButton[]
 
-	width = `width: ${this.cardWidth}`
+	width = this.cardWidth ? `width: ${this.cardWidth};` : 'min-width: 400px;'
+
+	getUrlDomain(url: string) {
+		return new URL(url).hostname
+	}
 }

@@ -55,5 +55,25 @@ section {
       font-weight: 900;
       padding: 0.5rem 0.8rem;
     }
+
+    a#link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: theme.$guide-color;
+      background-color: theme.$gutter-color;
+      border: 1px solid theme.$guide-color;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      transition: transform 300ms;
+    }
+
+    a#link:hover {
+      transform: scale(1.1);
+    }
   }
 }
