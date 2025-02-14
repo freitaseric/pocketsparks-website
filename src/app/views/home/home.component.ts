@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
 import { NgxTypedWriterComponent } from 'ngx-typed-writer'
-import { CardComponent } from '../../card/card.component'
+import { CardComponent } from '../../components/card/card.component'
 
 @Component({
 	selector: 'app-home',

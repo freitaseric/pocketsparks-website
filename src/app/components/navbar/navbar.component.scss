@@ -9,6 +9,7 @@ header {
   padding: 1rem 0rem 1rem 0rem;
   background-color: theme.$gutter-color;
   margin-bottom: 2rem;
+  color: theme.$guide-color;
 
   img {
     width: 3rem;
@@ -22,11 +23,31 @@ header {
   }
 
   nav {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+
+    button {
+      text-transform: uppercase;
+      font-weight: 700;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 300ms;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background-color: theme.$background-color;
+    }
 
     a {
       transition: all 350ms;
@@ -44,6 +65,53 @@ header {
     a.active:hover {
       transform: scale(1.15);
       color: theme.$accent-color;
+    }
+
+    div#menu {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      padding: 0.5rem 0;
+      background-color: theme.$foreground-color;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: 8rem;
+      border-radius: 8px;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+
+        span {
+          display: block;
+          text-decoration: none;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      a:hover {
+        transform: scale(1);
+      }
     }
   }
 }
